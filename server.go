@@ -39,6 +39,7 @@ func Id(w http.ResponseWriter, r *http.Request) {
 	for i := 0; i < count; i++ {
 		ids = append(ids, generator.GetBase64UUID())
 	}
+	ids = append(ids, "ross")
 	json.NewEncoder(w).Encode(ids)
 
 }
